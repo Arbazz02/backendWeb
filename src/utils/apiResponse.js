@@ -10,3 +10,5 @@ class apiresponse{
         this.message=message
     }
 }
+
+export {apiresponse}

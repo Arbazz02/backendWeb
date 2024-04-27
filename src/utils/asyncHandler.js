@@ -1,6 +1,6 @@
 // with promises
 const asyncHandler = (func)=>{
-    (req,res,next)=>{
+    return (req,res,next)=>{
         Promise.resolve(func(req,res,next)).catch((Error)=>{
             next(Error)
         })
@@ -8,7 +8,7 @@ const asyncHandler = (func)=>{
 }
 
 
-export {asyncHandler}
+
 
 // with try and catch mehtod
 
@@ -23,3 +23,5 @@ export {asyncHandler}
 //     }
 
 // }
+
+export {asyncHandler}

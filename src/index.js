@@ -1,12 +1,12 @@
-import mongoose  from "mongoose";
-import { DB_NAME } from "./constants.js";
+// import mongoose  from "mongoose";
+// import { DB_NAME } from "./constants.js";
 import dotenv from 'dotenv';
-import express from 'express'
+// import express from 'express'
 import connectDB from "./db/index.js";
-const app=express();
+// const app=express();
 dotenv.config({path:"./env"})
 
-
+import {app} from './app.js'
 
 
 
@@ -16,7 +16,7 @@ connectDB()
         console.log("error is occured at connectedDatabase!!",err)
         throw err
     })
-    app.listen(process.env.PORT || 5000, ()=>{
+    app.listen(process.env.PORT || 8000, ()=>{
         console.log(`server is running at port: ${process.env.PORT}`);
     })
     
